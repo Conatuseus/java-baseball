@@ -73,12 +73,12 @@ public class Computer implements Player{
      */
     @Override
     public void makeNewNumber() {
-        int[] randomNumber;
+        int[] randomNumber;         // 임시 저장 배열
 
         do {
-            randomNumber = this.makeRandomNumber();
-        } while (!isValid(randomNumber));
+            randomNumber = this.makeRandomNumber();     // 임시 배열에 랜덤 수 만든 배열 넣음.
+        } while (!isValid(randomNumber));               // 유효한지 판단. 중복된 수가 있으면 다시 랜덤수 만듬.
 
-        this.setNumbers(randomNumber);
+        this.setNumbers(randomNumber);                  // 랜덤 배열을 setter를 사용해 인스턴스 변수에 저장.
     }
 }
