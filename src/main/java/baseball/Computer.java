@@ -46,12 +46,20 @@ public class Computer implements Player{
         return numbers;
     }
 
-
+    /**
+     * 랜덤한 수를 만들어서 배열에 담아 배열을 반환하는 메서드.
+     * @return randomNumber Array
+     */
+    public int[] makeRandomNumber(){
+        int[] randomNumber=new int[3];
+        for(int i=0;i<3;i++){
+            randomNumber[i]=(int)(Math.random()*9)+1;
+        }
+        return randomNumber;
+    }
 
     @Override
     public void makeNewNumber() throws IOException {
 
     }
-
-    \
 }
