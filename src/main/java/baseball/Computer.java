@@ -8,7 +8,6 @@
 
 package baseball;
 
-import java.io.IOException;
 
 /**
  * Computer Class는 컴퓨터를 위한 클래스이다.
@@ -70,7 +69,7 @@ public class Computer implements Player{
     }
 
     @Override
-    public void makeNewNumber() throws IOException {
+    public void makeNewNumber() {
 
     }
 }
