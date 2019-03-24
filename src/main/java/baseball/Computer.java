@@ -8,6 +8,8 @@
 
 package baseball;
 
+import java.io.IOException;
+
 /**
  * Computer Class는 컴퓨터를 위한 클래스이다.
  * Player interface를 구현한다.
@@ -17,7 +19,7 @@ package baseball;
  * @version        1.00     2019년   3월  24일
  * @author         사명기
  */
-public class Computer {
+public class Computer implements Player{
 
     /** 인스턴스 변수 numbers는 Computer가 생성한 세 자리의 수를 저장하기위한 배열 */
     private int[] numbers;
@@ -28,6 +30,28 @@ public class Computer {
     public Computer(){
     }
 
+    /**
+     * 인스턴스 변수 numbers의 Setter
+     * @param numbers
+     */
+    public void setNumbers(int[] numbers) {
+        this.numbers = numbers;
+    }
+
+    /**
+     * 인스턴스 변수 numbers의 getter
+     * @return
+     */
+    public int[] getNumbers() {
+        return numbers;
+    }
 
 
+
+    @Override
+    public void makeNewNumber() throws IOException {
+
+    }
+
+    \
 }
