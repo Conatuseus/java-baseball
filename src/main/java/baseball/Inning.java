@@ -41,21 +41,21 @@ public class Inning{
     public String getResultToString(){
         StringBuilder sb=new StringBuilder();
 
-        if(this.strike==3){
-            return "3 스트라이크";           //
-        }
-        else if(this.strike>0){
-            sb.append(this.strike).append(" 스트라이크");
+        if(this.strike>0){
+            sb.append(this.strike).append("스트라이크");          // 스트라이크가 1개 또는 2개이면
+            if(this.ball==0){
+                return sb.toString();                  // 스트라이크는 있고 볼은 없으면
+            }
         }
 
         if(this.ball>0){
             if(this.strike>0){
-                sb.append(" ");
+                sb.append(" ");            // 볼 갯수가 0 이상이고, 스트라이크 갯수가 0 이상이면 빈칸 추가.
             }
-            sb.append(this.ball).append(" 볼");
+            sb.append(this.ball).append("볼");          // 볼 갯수가 0 이상이면
             return sb.toString();
         }
 
-        return (this.strike>0) ? sb.toString() : "낫싱";
+        return "낫싱";        // strike, ball 모두 0이면
     }
 }
