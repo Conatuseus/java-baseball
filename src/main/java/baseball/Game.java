@@ -42,4 +42,23 @@ public class Game {
         System.out.print("숫자를 입력해 주세요 : ");
     }
 
+    /**
+     * 한 이닝의 결과를 반환하는
+     * @return
+     */
+    public Inning getInningResult(){
+        Inning inning=new Inning();
+        for(int i=0; i<3; i++){
+            if(this.user.getNumbers()[i] == this.computer.getNumbers()[i]){
+                inning.strike++;
+            }
+            else if((this.user.getNumbers()[i] == this.computer.getNumbers()[(i+1)%3])
+                    || (this.user.getNumbers()[i] == this.computer.getNumbers()[(i+2)%3])){
+                inning.ball++;
+            }
+        }
+        return inning;
+    }
+
 }
+
