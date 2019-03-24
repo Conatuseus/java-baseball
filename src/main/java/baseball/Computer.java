@@ -22,5 +22,12 @@ public class Computer {
     /** 인스턴스 변수 numbers는 Computer가 생성한 세 자리의 수를 저장하기위한 배열 */
     private int[] numbers;
 
+    /**
+     *  매개변수가 없는 기본 생성자
+     */
+    public Computer(){
+    }
+
+
 
 }
