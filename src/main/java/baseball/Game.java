@@ -61,6 +61,10 @@ public class Game {
         return inning;
     }
 
+    /**
+     * 한 이닝의 결과를 받아서 출력하는 메서드.
+     * @param inning  getInningResult의 결과로 받은 파라미터.
+     */
     public void printInningResult(Inning inning){
         System.out.println(inning.getResultToString());
     }
