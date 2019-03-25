@@ -86,6 +86,13 @@ public class Game {
     }
 
     /**
+     * 프로그램이 종료될 때 출력하는 메서드
+     */
+    public void printIsOvered(){
+        System.out.println("게임이 종료되었습니다.");
+    }
+
+    /**
      * 이닝을 진행하는 메서드
      * 정답을 맞출 때까지 계속 수를 입력받는다.
      * @throws IOException
