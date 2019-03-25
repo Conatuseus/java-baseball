@@ -104,7 +104,7 @@ public class Game {
             printInningResult(inning);                      // 결과를 출력
 
             if(inning.strike==3){
-                this.printInningResult(inning);
+                this.printIsRightAnswer();
                 break;                  // 3스트라이크면 종료
             }
         }
