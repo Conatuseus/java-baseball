@@ -67,7 +67,7 @@ public class User implements Player{
             return false;                                           /* input의 길이가 3이 아닌 경우 */
         }
         for(int i=0; i<input.length(); i++) {                       /* 각 자리마다 확인 */
-            if ((input.charAt(i)<'1') && (input.charAt(i)>'9')) {
+            if ((input.charAt(i)<'1') || (input.charAt(i)>'9')) {
                 return false;                                       /* 1이상 9이하의 수가 아닌 경우 */
             }
         }
