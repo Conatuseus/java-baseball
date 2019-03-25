@@ -85,10 +85,25 @@ public class Game {
         System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임종료");
     }
 
-    public void runOneInning() throws IOException {
-        this.printGetNumber();
-        this.user.makeNewNumber();
+    /**
+     * 이닝을 진행하는 메서드
+     * 정답을 맞출 때까지 계속 수를 입력받는다.
+     * @throws IOException
+     */
+    public void runInning() throws IOException {
+        while (true) {
+            this.printGetNumber();                          // 숫자 입력하라는 문구 출력
+            this.user.makeNewNumber();                      // 세 자리수 입력받음
 
+            Inning inning = this.getInningResult();
+            printInningResult(inning);
+
+            if(inning.strike==3){
+                break;
+            }
+        }
     }
+
+
 }
 
