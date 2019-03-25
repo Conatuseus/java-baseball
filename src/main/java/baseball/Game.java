@@ -105,5 +105,13 @@ public class Game {
     }
 
 
+    public void run() throws IOException {
+        while (true){
+            this.runInning();
+            this.printIsContinue();
+
+        }
+    }
+
 }
 

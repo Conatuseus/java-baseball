@@ -9,6 +9,8 @@
 package baseball;
 
 
+import java.io.IOException;
+
 /**
  * Computer Class는 컴퓨터를 위한 클래스이다.
  * Player interface를 구현한다.
@@ -44,6 +46,11 @@ public class Computer implements Player{
     @Override
     public int[] getNumbers() {
         return numbers;
+    }
+
+    @Override
+    public boolean isContinue() {
+        return false;
     }
 
     /**

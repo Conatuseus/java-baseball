@@ -25,4 +25,5 @@ public interface Player {
 
     public int[] getNumbers();
 
+    public boolean isContinue() throws IOException;
 }
