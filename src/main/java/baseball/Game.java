@@ -9,8 +9,6 @@
 package baseball;
 
 
-import java.io.IOException;
-
 /**
  * Game Class는 게임을 위한 클래스이다.
  * 인스턴스 변수인 user와 computer가 있다.
@@ -96,7 +94,6 @@ public class Game {
     /**
      * 이닝을 진행하는 메서드
      * 정답을 맞출 때까지 계속 수를 입력받는다.
-     * @throws IOException
      */
     public void runInning() {
         while (true) {
