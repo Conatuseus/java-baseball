@@ -95,11 +95,11 @@ public class Game {
             this.printGetNumber();                          // 숫자 입력하라는 문구 출력
             this.user.makeNewNumber();                      // 세 자리수 입력받음
 
-            Inning inning = this.getInningResult();
-            printInningResult(inning);
+            Inning inning = this.getInningResult();         // 이닝의 결과 객체를 생성.
+            printInningResult(inning);                      // 결과를 출력
 
             if(inning.strike==3){
-                break;
+                break;                  // 3스트라이크면 종료
             }
         }
     }
