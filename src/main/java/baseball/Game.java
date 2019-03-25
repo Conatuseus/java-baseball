@@ -14,8 +14,9 @@ import java.io.IOException;
 /**
  * Game Class는 게임을 위한 클래스이다.
  * 인스턴스 변수인 user와 computer가 있다.
- *
- *
+ * 사용자가 수를 맞출때까지 입력받고 결과를 출력하는 메서드가 있다.
+ * 즉, 한 이닝을 반복적으로 실행한다. 맞추면 정답이라고 알려주고 정지한다.
+ * 위의 메소드를 반복적으로 실행하는 메서드가 있고, 이 메서드는 입력에 따라 새로운 게임을 할 것인지 아닌지 판단한다.
  *
  * @version        1.00     2019년   3월  25일
  * @author         사명기
@@ -68,7 +69,7 @@ public class Game {
      * @param inning  getInningResult의 결과로 받은 파라미터.
      */
     public void printInningResult(Inning inning){
-        System.out.println(inning.getResultToString());
+        System.out.println(inning.getResultToString());         // 이닝의 결과를 출력하는 메서드.
     }
 
     /**
@@ -106,6 +107,7 @@ public class Game {
             printInningResult(inning);                      // 결과를 출력
 
             if(inning.strike==3){
+                this.printInningResult(inning);
                 break;                  // 3스트라이크면 종료
             }
         }
@@ -113,7 +115,6 @@ public class Game {
 
     /**
      * 게임 전체를 실행하기 위한 메서드
-     * @throws IOException
      */
     public void run() {
         while (true){
