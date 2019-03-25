@@ -89,4 +89,9 @@ public class Computer implements Player{
 
         this.setNumbers(randomNumber);                  // 랜덤 배열을 setter를 사용해 인스턴스 변수에 저장.
     }
+
+    @Override
+    public String toString(){
+        return this.getNumbers()[0]+""+this.getNumbers()[1]+""+this.getNumbers()[2];
+    }
 }
