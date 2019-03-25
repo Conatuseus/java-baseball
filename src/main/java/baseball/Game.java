@@ -125,6 +125,7 @@ public class Game {
                 break;                          // 사용자가 종료(2) 입력 시
             }
         }
+        this.printIsOvered();                   // 프로그램이 종료될 때 출력
     }
 
 }
